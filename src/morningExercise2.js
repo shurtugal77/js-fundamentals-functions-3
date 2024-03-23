@@ -30,7 +30,7 @@ console.log(halvedNumbersArray)
 
 // 5. Use .forEach and an arrow function to double every number in the
 // numbers array. Modify the original array, don't create a new one
-numbers.forEach((currentNumber, index) => {
+numbers.forEach((_, index) => {
   numbers[index] *= 2
 })
 console.log(numbers)
