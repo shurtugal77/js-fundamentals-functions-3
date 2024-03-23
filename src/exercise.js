@@ -37,7 +37,7 @@ const greetStudents = (greeting, shouldShout) => {
 
   let message = ''
 
-  for (let i = 0; i < studentNames.length; i++) {
+  for (let i = 0; i < calcListSize(); i++) {
     message = greeting + ' ' + studentNames[i]
 
     if (shouldShout) {
