@@ -19,7 +19,6 @@ const timerStatus = (minutesRemaining) => {
   return message
 }
 
-
 // 2. To help Phil prepare ahead of time, create a function named estimatePrepTime
 // that accepts two parameters:
 // - an array of ingredients (e.g. ["sugar", "milk", "flour", "eggs"])
@@ -45,7 +44,6 @@ const estimatePrepTime = (ingredientsArray, prepTimePerIngredient = 2) => {
 // const testIngredients = ["sugar", "milk", "flour", "eggs"]
 // console.log(estimatePrepTime(testIngredients))
 
-
 // 3. Phil needs to know the quantity of milk and eggs to use! Create a function
 // named calculateQuantities which accepts two parameters:
 // - a list of ingredients
@@ -61,11 +59,6 @@ const estimatePrepTime = (ingredientsArray, prepTimePerIngredient = 2) => {
 //
 // calculateQuantities(["milk", "eggs"], 3)
 // returns: { sugar: 0, eggs: 6 }
-
-
-
-
-
 
 // 4. Phil's cake is pretty small and only provides 1 portion. He wants to make a bigger one!
 // Create a function named improveRecipe that accepts two parameters:
@@ -87,7 +80,7 @@ module.exports = {
   /* eslint-disable no-undef */
   estimatePrepTime,
   /* eslint-disable no-undef */
-  calculateQuantities,
+  calculateQuantities
   /* eslint-disable no-undef */
-  //improveRecipe
+  // improveRecipe
 }
