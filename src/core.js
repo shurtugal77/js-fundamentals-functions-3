@@ -41,7 +41,7 @@ const estimatePrepTime = (ingredientsArray, prepTimePerIngredient = 2) => {
   return totalPrepTime
 }
 
-// const testIngredients = ["sugar", "milk", "flour", "eggs"]
+// const testIngredients = ['milk', 'sugar', 'flour', 'eggs']
 // console.log(estimatePrepTime(testIngredients))
 
 // 3. Phil needs to know the quantity of milk and eggs to use! Create a function
@@ -59,6 +59,26 @@ const estimatePrepTime = (ingredientsArray, prepTimePerIngredient = 2) => {
 //
 // calculateQuantities(["milk", "eggs"], 3)
 // returns: { sugar: 0, eggs: 6 }
+
+const calculateQuantities = (ingredientsArray, numberOfLayers) => {
+  const resultObject = {
+    sugar: 0,
+    eggs: 0
+  }
+
+  ingredientsArray.forEach((element) => {
+    if (element === 'sugar') {
+      resultObject.sugar = numberOfLayers * 100
+    }
+
+    if (element === 'eggs') {
+      resultObject.eggs = numberOfLayers * 2
+    }
+  })
+
+  return resultObject
+}
+// console.log(calculateQuantities(testIngredients, 3))
 
 // 4. Phil's cake is pretty small and only provides 1 portion. He wants to make a bigger one!
 // Create a function named improveRecipe that accepts two parameters:
