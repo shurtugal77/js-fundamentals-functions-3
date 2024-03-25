@@ -5,6 +5,21 @@
 // "The cake is still baking!" if there are any remaining minutes left,
 // or "You didn't set a timer!" if no value is provided to the parameter
 
+const timerStatus = (minutesRemaining) => {
+  let message = ''
+
+  if (minutesRemaining > 0) {
+    message = 'The cake is still baking!'
+  } else if (minutesRemaining === 0) {
+    message = "Phil's cake is ready!"
+  } else {
+    message = "You didn't set a timer!"
+  }
+
+  return message
+}
+
+
 // 2. To help Phil prepare ahead of time, create a function named estimatePrepTime
 // that accepts two parameters:
 // - an array of ingredients (e.g. ["sugar", "milk", "flour", "eggs"])
@@ -13,6 +28,23 @@
 // number of ingredients provided and the prep time per ingredient.
 // If no prep time per ingredient is provided, the function should assume each ingredient
 // takes 2 minutes to prepare
+
+const estimatePrepTime = (ingredientsArray, prepTimePerIngredient = 2) => {
+  let ingredientCounter = 0
+  let totalPrepTime = 0
+
+  ingredientsArray.forEach(() => {
+    ingredientCounter += 1
+  })
+
+  totalPrepTime = ingredientCounter * prepTimePerIngredient
+
+  return totalPrepTime
+}
+
+// const testIngredients = ["sugar", "milk", "flour", "eggs"]
+// console.log(estimatePrepTime(testIngredients))
+
 
 // 3. Phil needs to know the quantity of milk and eggs to use! Create a function
 // named calculateQuantities which accepts two parameters:
@@ -29,6 +61,11 @@
 //
 // calculateQuantities(["milk", "eggs"], 3)
 // returns: { sugar: 0, eggs: 6 }
+
+
+
+
+
 
 // 4. Phil's cake is pretty small and only provides 1 portion. He wants to make a bigger one!
 // Create a function named improveRecipe that accepts two parameters:
@@ -52,5 +89,5 @@ module.exports = {
   /* eslint-disable no-undef */
   calculateQuantities,
   /* eslint-disable no-undef */
-  improveRecipe
+  //improveRecipe
 }
