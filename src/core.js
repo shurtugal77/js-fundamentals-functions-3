@@ -93,6 +93,31 @@ const calculateQuantities = (ingredientsArray, numberOfLayers) => {
 // improveRecipe({ eggs: 2, milk: 100, sugar: 200 }, 3)
 // returns: { eggs: 6, milk: 300, sugar: 600 }
 
+// const myIngredients = {
+//   eggs: 2,
+//   milk: 100,
+//   sugar: 200
+// }
+
+const improveRecipe = (ingredientObject, portions) => {
+  const newIngredients = {}
+
+  const newKeys = Object.keys(ingredientObject).map((element) => {
+    return element
+  })
+  const newValues = Object.values(ingredientObject).map((element) => {
+    return element * portions
+  })
+
+  newKeys.forEach((key, index) => {
+    newIngredients[key] = newValues[index]
+  })
+
+  return newIngredients
+}
+
+// console.log(improveRecipe(myIngredients, 10))
+
 // Don't change the code below this line
 module.exports = {
   /* eslint-disable no-undef */
@@ -100,7 +125,7 @@ module.exports = {
   /* eslint-disable no-undef */
   estimatePrepTime,
   /* eslint-disable no-undef */
-  calculateQuantities
+  calculateQuantities,
   /* eslint-disable no-undef */
-  // improveRecipe
+  improveRecipe
 }
